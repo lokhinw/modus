@@ -15,7 +15,7 @@ app.get("/", function(req, res) {
         let location_url = "http://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=doss23s1LxQl8yiV7YgQu4uK3lU2Ak2v&q=" + location + "&language=en-us&details=false"
         request(location_url, function(error, response, body) {
             if (!error && response.statusCode == 200) {
-                let random_playlist = Math.floor(Math.random() * 4 + 1);
+                let random_playlist = Math.floor(Math.random() * 4) + 1;
                 let location_key = JSON.parse(body).Key;
                 let location_name = JSON.parse(body).EnglishName + ", " + JSON.parse(body).Country.EnglishName;
                 let weather_url = "http://dataservice.accuweather.com/forecasts/v1/daily/1day/" + location_key + "?apikey=doss23s1LxQl8yiV7YgQu4uK3lU2Ak2v&language=en-us&details=false&metric=true";
