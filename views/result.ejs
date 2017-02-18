@@ -1,5 +1,14 @@
 <% include partials/header %>
-<h1> <%= location_name %> </h1>
-<%= result.DailyForecasts[0].Day.Icon %>
-<%= result.DailyForecasts[0].Day.IconPhrase %>
+<h1>
+    <%= location_name %>
+</h1>
+<% if (Number(result.DailyForecasts[0].Day.Icon) >= 1 && Number(result.DailyForecasts[0].Day.Icon) <=5) { %>
+<h2>Sunny Playlist</h2>
+<% } else if (Number(result.DailyForecasts[0].Day.Icon) >= 6 && Number(result.DailyForecasts[0].Day.Icon) <=11) { %>
+<h2>Cloudy Playlist</h2>
+<% } else if (Number(result.DailyForecasts[0].Day.Icon) >= 12 && Number(result.DailyForecasts[0].Day.Icon) <=18) { %>
+<h2>Rainy Playlist</h2>
+<% } else if (Number(result.DailyForecasts[0].Day.Icon) >= 19 && Number(result.DailyForecasts[0].Day.Icon) <=25) { %>
+<h2>Snowy Playlist</h2>
+<% } %>
 <% include partials/footer %>
