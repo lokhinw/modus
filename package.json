@@ -18,6 +18,7 @@
   "homepage": "https://github.com/lokhinw/modus#readme",
   "dependencies": {
     "body-parser": "^1.16.1",
+    "cheerio": "^0.22.0",
     "ejs": "^2.5.6",
     "express": "^4.14.1",
     "external-ip": "^0.2.4",
