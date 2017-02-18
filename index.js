@@ -5,10 +5,23 @@ let express = require("express"),
 
 let app = express();
 
-app.post("/weather", function(req, res) {
-    accuweather.getCurrentConditions("Toronto", {unit: "Celcius"})
+app.get("/", function(req, res) {
+  res.render("index");
+});
+
+app.use(bodyparser.urlencoded({
+    extended: true
+}));
+app.set("view engine", "ejs");
+
+app.post("/result", function(req, res) {
+    accuweather.getCurrentConditions("Toronto", {
+            unit: "Celcius"
+        })
         .then(function(result) {
-            console.log(result);
+            res.render("result", {
+                result: result
+            });
         });
 });
 
