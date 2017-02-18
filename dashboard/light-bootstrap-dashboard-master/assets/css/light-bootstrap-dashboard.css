@@ -1,19 +1,4 @@
-/*!
-    
- =========================================================
- * Light Bootstrap Dashboard - v1.3.1.0
- =========================================================
- 
- * Product Page: http://www.creative-tim.com/product/light-bootstrap-dashboard
- * Copyright 2017 Creative Tim (http://www.creative-tim.com)
- * Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard/blob/master/LICENSE.md)
- 
- =========================================================
- 
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- 
- */
-/*      light colors         */
+
 @keyframes spin {
   from {
     transform: rotate(0deg); }
@@ -98,6 +83,10 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
 h1 .subtitle {
   display: block;
   margin: 0 0 30px; }
+
+.content {
+  width: 100%;
+}
 
 .text-muted {
   color: #9A9A9A; }
