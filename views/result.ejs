@@ -15,8 +15,26 @@
 <h2>Sunny Playlist</h2>
 <% } else if (Number(result.DailyForecasts[0].Day.Icon) >= 6 && Number(result.DailyForecasts[0].Day.Icon) <=11) { %>
 <h2>Cloudy Playlist</h2>
+<% if (random_playlist === 1) { %>
+     <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify_france:playlist:3fo3sq7WExOXk1St5ajqya" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+  <% } else if(random_playlist === 2) { %>
+    <iframe src="https://embed.spotify.com/?uri=spotify:user:spotifyaustralia:playlist:4Yczh8EPzyJ38WgSiL2tYX" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+  <% } else if(random_playlist === 3) { %>
+    <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify_denmark:playlist:0z8XqK0Mo9oop6C67PDiNO" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+  <% } else if(random_playlist === 4) { %>
+    <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:6NCfeirBIrZfYcs9kwnS3x" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+  <%  } %>
 <% } else if (Number(result.DailyForecasts[0].Day.Icon) >= 12 && Number(result.DailyForecasts[0].Day.Icon) <=18) { %>
 <h2>Rainy Playlist</h2>
+<% if (random_playlist === 1) { %>
+    <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:7MPXsjQGsXcLdNz7UxVuVl" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+  <% } else if(random_playlist === 2) { %>
+ <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3Jlo5JoAA9pMUQfhLaLG5u" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+   <% } else if(random_playlist === 3) { %>
+    <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify_denmark:playlist:0z8XqK0Mo9oop6C67PDiNO" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+  <% } else if(random_playlist === 4) { %>
+<iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:1ygSzMVCN3cXEAbEMVdtm8" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+  <%  } %>
 <% } else if (Number(result.DailyForecasts[0].Day.Icon) >= 19 && Number(result.DailyForecasts[0].Day.Icon) <=25) { %>
 <h2>Snowy Playlist</h2>
 <% } else if (Number(result.DailyForecasts[0].Day.Icon) >= 26 && Number(result.DailyForecasts[0].Day.Icon) <=29) { %>
