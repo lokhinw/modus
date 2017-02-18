@@ -1,4 +1,5 @@
 <% include partials/header %>
-<%= result.Summary %>
-<%= result.Temperature %>
+<h1> <%= location_name %> </h1>
+<%= result.DailyForecasts[0].Day.Icon %>
+<%= result.DailyForecasts[0].Day.IconPhrase %>
 <% include partials/footer %>
