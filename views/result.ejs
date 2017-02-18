@@ -10,5 +10,15 @@
 <h2>Rainy Playlist</h2>
 <% } else if (Number(result.DailyForecasts[0].Day.Icon) >= 19 && Number(result.DailyForecasts[0].Day.Icon) <=25) { %>
 <h2>Snowy Playlist</h2>
+<% } else if (Number(result.DailyForecasts[0].Day.Icon) >= 26 && Number(result.DailyForecasts[0].Day.Icon) <=29) { %>
+<h2>Downpour Playlis</h2>
+<% } else if (Number(result.DailyForecasts[0].Day.Icon) == 30 ){ %>
+<h2>Hot Playlist</h2>
+<% } else if (Number(result.DailyForecasts[0].Day.Icon) == 31 ){ %>
+<h2>Cold Playlist</h2>
+<% } else if (Number(result.DailyForecasts[0].Day.Icon) >= 32 && Number(result.DailyForecasts[0].Day.Icon) <=38) { %>
+<h2>Night Cloudy Playlist</h2>
+<% } else if (Number(result.DailyForecasts[0].Day.Icon) >= 39 && Number(result.DailyForecasts[0].Day.Icon) <=44) { %>
+<h2>Night Thunder Playlist</h2>
 <% } %>
 <% include partials/footer %>
