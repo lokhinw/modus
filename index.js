@@ -5,6 +5,8 @@ let express = require("express"),
 
 let app = express();
 
+app.use(express.static(__dirname + "/public"));
+
 app.get("/", function(req, res) {
   res.render("index");
 });
@@ -12,10 +14,11 @@ app.get("/", function(req, res) {
 app.use(bodyparser.urlencoded({
     extended: true
 }));
+
 app.set("view engine", "ejs");
 
 app.post("/result", function(req, res) {
-    accuweather.getCurrentConditions("Toronto", {
+    accuweather.getCurrentConditions(req.body.location, {
             unit: "Celcius"
         })
         .then(function(result) {
@@ -24,8 +27,6 @@ app.post("/result", function(req, res) {
             });
         });
 });
-
-app.use(express.static('static'));
 
 app.listen(3000, function(err) {
     console.log("Server running port 3000!");
