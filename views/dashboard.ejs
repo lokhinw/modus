@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Modus</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="viewport" content="width=device-width" />
+
+
+	<!-- Bootstrap core CSS     -->
+	<link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+
+	<!-- Animation library for notifications   -->
+	<link href="/stylesheets/animate.min.css" rel="stylesheet" />
+
+	<!--  Light Bootstrap Table core CSS    -->
+	<link href="/stylesheets/light-bootstrap-dashboard.css" rel="stylesheet" />
+
+
+	<!--  CSS for Demo Purpose, don't include it in your project     -->
+	<link href="/stylesheets/demo.css" rel="stylesheet" />
+
+
+	<!--     Fonts and icons     -->
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+	<link href="/stylesheets/pe-icon-7-stroke.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="sidebar" data-color="blue" data-image="">
+
+			<!--
+
+        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+        Tip 2: you can also add an image using data-image tag
+
+    -->
+
+			<div class="sidebar-wrapper">
+				<div class="logo text-center">
+					<img src="/images/logo.png" height="50%" width="50%">
+				</div>
+
+				<ul class="nav">
+					<li class="active">
+						<a href="/">
+							<i class="pe-7s-graph"></i>
+							<p>Dashboard</p>
+						</a>
+					</li>
+					<li>
+						<a href="/weather">
+							<i class="pe-7s-user"></i>
+							<p>Weather</p>
+						</a>
+					</li>
+					<li>
+						<a href="/music">
+							<i class="pe-7s-note2"></i>
+							<p>Music</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="main-panel">
+			<nav class="navbar navbar-default navbar-fixed">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+						<a class="navbar-brand" href="#"><%= location_name %> | <%= Number(result.DailyForecasts[0].Temperature.Maximum.Value) - Number(result.DailyForecasts[0].Temperature.Minimum.Value) %>°C | <%= result.DailyForecasts[0].Day.IconPhrase %></a>
+					</div>
+				</div>
+			</nav>
+			<% if (Number(result.DailyForecasts[0].Day.Icon) >= 1 && Number(result.DailyForecasts[0].Day.Icon) <=5) { %>
+			  <% if (random_playlist === 1) { %>
+			     <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify_france:playlist:3fo3sq7WExOXk1St5ajqya" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <% } else if(random_playlist === 2) { %>
+			    <iframe src="https://embed.spotify.com/?uri=spotify:user:spotifyaustralia:playlist:4Yczh8EPzyJ38WgSiL2tYX" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <% } else if(random_playlist === 3) { %>
+			    <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify_denmark:playlist:0z8XqK0Mo9oop6C67PDiNO" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <% } else if(random_playlist === 4) { %>
+			    <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:6NCfeirBIrZfYcs9kwnS3x" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <%  } %>
+			<% } else if (Number(result.DailyForecasts[0].Day.Icon) >= 6 && Number(result.DailyForecasts[0].Day.Icon) <=11) { %>
+			<% if (random_playlist === 1) { %>
+			     <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:7MPXsjQGsXcLdNz7UxVuVl" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <% } else if(random_playlist === 2) { %>
+			  <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:1ygSzMVCN3cXEAbEMVdtm8" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <% } else if(random_playlist === 3) { %>
+			   <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:66oi6TpdQHk3kS7ZHOx8gX" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <% } else if(random_playlist === 4) { %>
+			    <iframe src="https://embed.spotify.com/?uri=spotify:user:sonymusicentertainment:playlist:3oRNodhtGLVnZl0Q32FJHB" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <%  } %>
+			<% } else if (Number(result.DailyForecasts[0].Day.Icon) >= 12 && Number(result.DailyForecasts[0].Day.Icon) <=18) { %>
+			<% if (random_playlist === 1) { %>
+			    <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:7MPXsjQGsXcLdNz7UxVuVl" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <% } else if(random_playlist === 2) { %>
+			 <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3Jlo5JoAA9pMUQfhLaLG5u" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			   <% } else if(random_playlist === 3) { %>
+			    <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify_denmark:playlist:0z8XqK0Mo9oop6C67PDiNO" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <% } else if(random_playlist === 4) { %>
+			<iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:1ygSzMVCN3cXEAbEMVdtm8" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <%  } %>
+			<% } else if (Number(result.DailyForecasts[0].Day.Icon) >= 19 && Number(result.DailyForecasts[0].Day.Icon) <=25) { %>
+			<% if (random_playlist === 1) { %>
+			    <iframe src="https://embed.spotify.com/?uri=spotify:user:universal.fm:playlist:7iMyUkmPe7epyb8J1mqT9y" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <% } else if(random_playlist === 2) { %>
+			 <iframe src="https://embed.spotify.com/?uri=spotify:user:playlistmecanada:playlist:34YFb2iLoZak9zCWS2JT5I" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			   <% } else if(random_playlist === 3) { %>
+			    <iframe src="https://embed.spotify.com/?uri=spotify:user:1258943106:playlist:3J4VjgbebrLO1oMGOkhY8J" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <% } else if(random_playlist === 4) { %>
+			<iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:6HGSpo0k6PHdXBb4ayyya2" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <%  } %>
+			<% } else if (Number(result.DailyForecasts[0].Day.Icon) >= 26 && Number(result.DailyForecasts[0].Day.Icon) <=29) { %>
+			<% if (random_playlist === 1) { %>
+			   <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:7CQunpJEHecknIyABfS8pP" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <% } else if(random_playlist === 2) { %>
+			 <iframe src="https://embed.spotify.com/?uri=spotify:user:calist0:playlist:4Ik76Vbsj0iX0GFaBSdOpH" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			   <% } else if(random_playlist === 3) { %>
+			    <iframe src="https://embed.spotify.com/?uri=spotify:user:1121683318:playlist:2DRTCG2thIaquAqByzRIka" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <% } else if(random_playlist === 4) { %>
+			<iframe src="https://embed.spotify.com/?uri=spotify:user:eden.mcmxcv:playlist:4ifXQgdnknl15Ry98ibCga" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <%  } %>
+			<% } else if (Number(result.DailyForecasts[0].Day.Icon) == 30 ){ %>
+			<% if (random_playlist === 1) { %>
+			   <iframe src="https://embed.spotify.com/?uri=spotify:user:nibsquib:playlist:5xImmD4gLnVllSwOAnuLm6" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <% } else if(random_playlist === 2) { %>
+			 <iframe src="https://embed.spotify.com/?uri=spotify:user:11136351958:playlist:3IWmcdkxV1LLdjjknr8I9Z" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			   <% } else if(random_playlist === 3) { %>
+			    <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify_uk_:playlist:6FfOZSAN3N6u7v81uS7mxZ" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <% } else if(random_playlist === 4) { %>
+			<iframe src="https://embed.spotify.com/?uri=spotify:track:1y4eb6hmAvsqlDOl3fx9kk" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <%  } %>
+			<% } else if (Number(result.DailyForecasts[0].Day.Icon) == 31 ){ %>
+			<% if (random_playlist === 1) { %>
+			   <iframe src="https://embed.spotify.com/?uri=spotify:track:7zsXy7vlHdItvUSH8EwQss" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <% } else if(random_playlist === 2) { %>
+			 <iframe src="https://embed.spotify.com/?uri=spotify:track:4THoSHxiabL1rd59iVWu2T" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			   <% } else if(random_playlist === 3) { %>
+			    <iframe src="https://embed.spotify.com/?uri=spotify:user:bringm01:playlist:3IWb3aghB6gylTNF5sCUjl" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <% } else if(random_playlist === 4) { %>
+			<iframe src="https://embed.spotify.com/?uri=spotify:user:itsnyarichards:playlist:07tFsf49gsnOGhG9dnkXNx" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <%  } %>
+			<% } else if (Number(result.DailyForecasts[0].Day.Icon) >= 32 && Number(result.DailyForecasts[0].Day.Icon) <=38) { %>
+			<% if (random_playlist === 1) { %>
+			   <iframe src="https://embed.spotify.com/?uri=spotify:track:31t0ATifZW5CW3XP2QUsUW" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <% } else if(random_playlist === 2) { %>
+			 <iframe src="https://embed.spotify.com/?uri=spotify:track:60xaS8mYBKUW4VQQ666N0T" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			   <% } else if(random_playlist === 3) { %>
+			    <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3ewAapAmERO3sW4cp89xk9" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <% } else if(random_playlist === 4) { %>
+			<iframe src="https://embed.spotify.com/?uri=spotify:album:6htgf3qv7vGcsdxLCDxKp8" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <%  } %>
+			<% } else if (Number(result.DailyForecasts[0].Day.Icon) >= 39 && Number(result.DailyForecasts[0].Day.Icon) <=44) { %>
+			<% if (random_playlist === 1) { %>
+			   <iframe src="https://embed.spotify.com/?uri=spotify:track:57bgtoPSgt236HzfBOd8kj" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <% } else if(random_playlist === 2) { %>
+			 <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3ewAapAmERO3sW4cp89xk9" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			   <% } else if(random_playlist === 3) { %>
+			       <iframe src="https://embed.spotify.com/?uri=spotify:track:31t0ATifZW5CW3XP2QUsUW" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <% } else if(random_playlist === 4) { %>
+			 <iframe src="https://embed.spotify.com/?uri=spotify:track:60xaS8mYBKUW4VQQ666N0T" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+			  <%  } %>
+			<% } %>
+			</div>
+		</div>
+</body>
+
+<!--   Core JS Files   -->
+<script src="/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!--  Checkbox, Radio & Switch Plugins -->
+<script src="/js/bootstrap-checkbox-radio-switch.js"></script>
+
+<!--  Charts Plugin -->
+<script src="/js/chartist.min.js"></script>
+
+<!--  Notifications Plugin    -->
+<script src="/js/bootstrap-notify.js"></script>
+
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+<script src="/js/light-bootstrap-dashboard.js"></script>
+
+
+</html>
