@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*!
 
  =========================================================
@@ -16,6 +17,8 @@
 
 
 /*      light colors         */
+=======
+>>>>>>> e85e3b07f5cb05307c870c29d0eb33896465b9d2
 
 @keyframes spin {
     from {
@@ -115,6 +118,10 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
 h1 .subtitle {
     display: block;
     margin: 0 0 30px;
+}
+
+.content {
+  width: 100%;
 }
 
 .text-muted {

@@ -63,3 +63,7 @@
 .table-upgrade td:nth-child(3){
     text-align: center;
 }
+
+.user {
+    text-align: center;
+}
